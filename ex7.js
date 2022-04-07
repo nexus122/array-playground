@@ -5895,6 +5895,9 @@ let champions = [
     }
 ];
 
-// Utiliza el método sort adecuadamente para ordenar todos los campeones de League Of Legends por su vida inicial (campo hp dentro de la propiedad stats). Queremos que los campeones con más vida estén al principio del array
+// ✔️ Utiliza el método sort adecuadamente para ordenar todos los campeones de League Of Legends por su vida inicial (campo hp dentro de la propiedad stats). Queremos que los campeones con más vida estén al principio del array
+const sortChampions = champions.sort((a,b) => a.stats.hp >= b.stats.hp ? -1: a.stats.hp <= b.stats.hp ? 1:0);
 
-console.log(champions.sort()); // TODO: ordenar por vida inicial
+console.log(sortChampions[0].name, sortChampions[0].stats.hp);
+console.log(sortChampions[1].name, sortChampions[1].stats.hp);
+console.log(sortChampions[champions.length-1].name, sortChampions[champions.length-1].stats.hp);
